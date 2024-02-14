@@ -152,10 +152,10 @@ rational_t::is_equal(const rational_t& r, const double precision) const
 bool 
 rational_t::is_greater(const rational_t& r, const double precision) const
 {
-  if (value() - r.value() > precision)  {
-    return 0;
+  if (r.value() - value() > precision)  {
+    return 1;
   } 
-  return 1;
+  return 0;
 }
 
 
@@ -170,10 +170,10 @@ rational_t::is_greater(const rational_t& r, const double precision) const
 bool 
 rational_t::is_less(const rational_t& r, const double precision) const
 {
-  if (value() - r.value() < (-1 * precision))  {
-    return 0;
+  if (r.value() - value() < (-1 * precision))  {
+    return 1;
   } 
-  return 1; 
+  return 0; 
 }
 
 
