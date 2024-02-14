@@ -14,6 +14,16 @@
   * @bug There are no known bugs
   */
 
+// AUTOR: Javier Acosta Portocarrero 
+// FECHA: 14/02/2024
+// EMAIL: alu0101660769@ull.edu.es
+// VERSION: 1.0
+// ASIGNATURA: Algoritmos y Estructuras de Datos
+// PRÁCTICA Nº: 1
+// COMENTARIOS: se indican entre [] las pautas de estilo aplicadas de
+//              "C++ Programming Style Guidelines"
+//              https://geosoft.no/development/cppstyle.html
+
 #pragma once
 
 #include <iostream>
