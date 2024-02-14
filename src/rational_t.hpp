@@ -31,6 +31,10 @@
 #include <cmath>
 
 // pauta de estilo [5]
+// Segun la guia de estilo de google: Las variables cuyo valor sea constante 
+// deben ser declaradas como const o constexpr (si se conoce su valor en tiempo 
+// de compilacion) y ademas su nombre debe de empezar por una k seguida de una 
+// letra en mayuscula.
 #define EPSILON 1e-6
 
 using namespace std;
