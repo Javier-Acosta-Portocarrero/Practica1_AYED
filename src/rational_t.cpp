@@ -134,9 +134,7 @@ rational_t::value() const
 bool 
 rational_t::is_equal(const rational_t& r, const double precision) const
 {
-  double real1{static_cast<double>(get_num()) / static_cast<double>(get_den())};
-  double real2{static_cast<double>(r.get_num()) / static_cast<double>(r.get_den())};
-  if (abs(real1 - real2) < precision)  {
+  if (abs(value() - r.value()) < precision)  {
     return 1;
   } 
   return 0;    
@@ -154,9 +152,7 @@ rational_t::is_equal(const rational_t& r, const double precision) const
 bool 
 rational_t::is_greater(const rational_t& r, const double precision) const
 {
-  double real1{static_cast<double>(get_num()) / static_cast<double>(get_den())};
-  double real2{static_cast<double>(r.get_num()) / static_cast<double>(r.get_den())};
-  if (real1 - real2 > precision)  {
+  if (value() - r.value() > precision)  {
     return 0;
   } 
   return 1;
@@ -174,9 +170,7 @@ rational_t::is_greater(const rational_t& r, const double precision) const
 bool 
 rational_t::is_less(const rational_t& r, const double precision) const
 {
-  double real1{static_cast<double>(get_num()) / static_cast<double>(get_den())};
-  double real2{static_cast<double>(r.get_num()) / static_cast<double>(r.get_den())};
-  if (real1 - real2 < (-1 * precision))  {
+  if (value() - r.value() < (-1 * precision))  {
     return 0;
   } 
   return 1; 
@@ -199,7 +193,13 @@ rational_t::add(const rational_t& r)
   resultado_suma.set_den(get_den() * r.get_den());
   return resultado_suma;
 }
-
+/*
+* int num{}, den{};
+* num = (get_num() * r.get_den()) + (get_den() * r.get_num());
+* den = (get_den() * r.get_den());
+* rational_t resultado(num, den);
+* return resultado;
+*/
 
 /**
   * @brief Este metodo realiza la resta entre dos reales.
